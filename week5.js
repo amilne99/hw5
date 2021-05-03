@@ -50,7 +50,10 @@ window.addEventListener('DOMContentLoaded', async function() {
         let weatherForecast = json.forecast
         // Round current temperature to provide same output aesthetic
         let currentTemp = Math.round(weatherCurrent.temp_f)
-        
+    // Clear any HTML currently on the page to avoid duplicates
+      document.querySelector(`.forecast`).innerHTML = ``
+      document.querySelector(`.current`).innerHTML = ``
+
     // Output the current weather for the city 
 
         // Store a reference for the "current" section
